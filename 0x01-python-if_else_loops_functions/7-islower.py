@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def islower(char):
-    return char >= ord('a') and char <= ord('z')
+def islower(c):
+    return c >= ord('a') and c <= ord('z')
