@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+# a function prints a string in uppercase followed by a new line.
 def uppercase(str):
+    upper = ""
     for char in str:
-        if ord('A') <= ord('str') <= ord('Z'):
-            print("{:s}".format(char))
+        if ord('a') <= ord(char) <= ord('z'):
+            upper += chr(ord(char) - 32)
         else:
-            print("{:s}".format(chr(ord(char) + 32)))
+            upper += char
+    print("{}" .format(upper))
