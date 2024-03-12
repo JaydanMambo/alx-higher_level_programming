@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def uppercase(str):
     if ord('A') <= ord('str') <= ord('Z'):
-        return True
+        print("{:s}".format(str))
     else:
-        return False
+        print("{:s}".format(chr(ord(str) + 32)))
