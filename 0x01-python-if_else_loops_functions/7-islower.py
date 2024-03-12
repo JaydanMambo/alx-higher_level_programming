@@ -6,6 +6,6 @@ def islower(char):
 if __name__ == "__main__":
     for char in range(ord('a'), ord('z') + 1):
         if islower(char):
-            print("{:c} is lower".format(char))
+            print("{} is lower".format(char))
         else:
-            print("{:c} is upper".format(char))
+            print("{} is upper".format(char))
