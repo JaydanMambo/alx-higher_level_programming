@@ -6,7 +6,7 @@ if __name__ == "__main__":
     if args_no == 0:
         print("{:d} arguments.".format(args_no))
     else:
-        print("{:d}{}:".format(args_no, " arguement"
+        print("{:d}{}:".format(args_no, " argument"
                                if args_no == 1 else " arguments"))
         for i in range(args_no):
             print("{:d}: {}".format(i + 1, av[i+1]))
