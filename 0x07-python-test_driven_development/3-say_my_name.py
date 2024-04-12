@@ -1,25 +1,25 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """
-This module prints the name of a anything
-Output: 'My name is <first name> <last name>'
-    * The first name and last name must be a strings
+Created on Thu May 21 17:43:34 2020
+
+@author: Robinson Montes
 """
 
 
 def say_my_name(first_name, last_name=""):
     """
-    Prints the names
+    priint a full name
+
     Args:
-        first_name (str): The first name of anything.
-        last_name (str): The last name of anything.
+        first_name (str): First string to print
+        last_name (str): second string to print
+
     Raises:
-        TypeError: If `first_name` and `last_name` aren't strings.
+        TypeError: Exception if arguments aren't string
     """
-
     if type(first_name) is not str:
-        raise TypeError('first_name must be a string')
-
+        raise TypeError("first_name must be a string")
     if type(last_name) is not str:
-        raise TypeError('last_name must be a string')
-
-    print('My name is', first_name, last_name)
+        raise TypeError("last_name must be a string")
+    print("My name is {} {}".format(first_name, last_name))

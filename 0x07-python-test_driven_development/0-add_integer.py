@@ -1,40 +1,32 @@
 #!/usr/bin/python3
-"""A module to add two numbers
-This module performs the addition operation between two numbers,
-these numbers can be integers or floats.
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 21 17:43:34 2020
+
+@author: Robinson Montes
 """
 
 
 def add_integer(a, b=98):
-    """Adds two numbers
-    Performs the addition between two numbers.
-    Args:
-        a (:obj:`int, float`): The first number.
-        b (:obj:`int, float`, optional): The second number.
-    Returns:
-        int: The result of the addition.
     """
-    if type(a) not in (int, float):
-        raise TypeError('a must be an integer')
+    adds two integers
 
-    if type(b) not in (int, float):
-        raise TypeError('b must be an integer')
+    Args:
+        a (int): First integer to add
+        b (int): Second integer to add
 
-    a = convert_to_int(a)
-    b = convert_to_int(b)
+    Raises:
+        TypeError: Exception if size is not an integer
+
+    """
+    if type(a) is not int:
+        if type(a) is float and a == a and abs(a) <= 1.7976931348623158e+308:
+            a = int(a)
+        else:
+            raise TypeError("a must be an integer")
+    if type(b) is not int:
+        if type(b) is float and b == b and abs(b) <= 1.7976931348623158e+308:
+            b = int(b)
+        else:
+            raise TypeError("b must be an integer")
     return a + b
-
-
-def convert_to_int(num):
-    """Cast the data type of num parameter
-    Convert a float number to a integer number
-    Args:
-        num (:obj:`int, float`): The number to cast.
-    Returns:
-        int: The number casted to integer.
-    """
-    if type(num) is float:
-        num = int(num)
-        return num
-
-    return num

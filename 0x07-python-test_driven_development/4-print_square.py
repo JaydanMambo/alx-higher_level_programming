@@ -1,34 +1,28 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 """
-This module prints a square with the character '#'
-of any positive integer size.
-Example:
-    ###
-    ###
-    ###
-    * The size must be an integer greater than 0.
+Created on Thu May 21 17:43:34 2020
+
+@author: Robinson Montes
 """
 
 
 def print_square(size):
     """
-    Prints the names
+    print a square of char #
+
     Args:
-        size (int): The size of the square to prints.
+        size (int): size of the square
+
     Raises:
-        TypeError: If `size` isn't integer.
-        ValueError: If `size` is less than 0.
+        TypeError: Exception if size is not integer
+        ValueError: Exception if size is less than 0
     """
-
     if type(size) is not int:
-        raise TypeError('size must be an integer')
+        raise TypeError("size must be an integer")
 
-    if size < 0:
-        raise ValueError('size must be >= 0')
+    elif size < 0:
+        raise ValueError("size must be >= 0")
 
-    for i in range(1, size + 1):
-        for j in range(1, size + 1):
-            print('#', end='')
-
-            if j % size == 0 and j > 0:
-                print()
+    for i in range(size):
+        print('#'*size)
