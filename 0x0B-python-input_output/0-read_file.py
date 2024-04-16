@@ -1,18 +1,8 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tru Jun 3 15:13:37 2020
-
-@author: Robinson Montes
-"""
+"""defining read_file function"""
 
 
 def read_file(filename=""):
-    """
-    Reads the file
-
-    Arguments:
-        filename (str): The name of the file to open
-    """
-    with open(filename, encoding='utf-8') as file:
-        print(file.read(), end='')
+    """reads filename with utf-8"""
+    with open(filename, encoding='utf-8') as f:
+        print(f.read(), end="")
